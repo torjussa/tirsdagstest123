@@ -7,7 +7,7 @@ export default function Home (props) {
 
   return (
     <div className='app'>
-      <h1>Hei Trondheim</h1>
+      <h1>Matbloggen</h1>
       
       <div className="recipes-list">
       {
