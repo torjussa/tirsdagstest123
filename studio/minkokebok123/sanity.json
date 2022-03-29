@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "project": {
+    "name": "min-kokebok123"
+  },
+  "api": {
+    "projectId": "fdtg1t1l",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    }
+  ]
+}

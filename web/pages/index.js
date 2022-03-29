@@ -1,12 +1,29 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import {Recipe} from "../components/Recipe"
+import {client} from "../client"
 
-export default function Home() {
+export default function Home (props) {
+
+  const {recipes} = props
+  console.log(recipes)
+
   return (
     <div className='app'>
       <h1>Hei Trondheim</h1>
-      <p>Mer tekst</p> 
+      
+      <div className="recipes-list">
+      {
+        recipes.map ( recipe => 
+         <Recipe recipe={recipe}/>
+        )
+      }
+      </div>
+
     </div>
   )
+}
+
+Home.getInitialProps = async () => {
+  return {
+    recipes: await client.fetch(`*[_type == 'recipe']`)
+  }
 }
