@@ -4,7 +4,6 @@ import {client} from "../client"
 export default function Home (props) {
 
   const {recipes} = props
-  console.log(recipes)
 
   return (
     <div className='app'>

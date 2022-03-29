@@ -3,7 +3,6 @@ import { client } from "../../client"
 
 const Oppskrift = (props) => {
     const {recipe} = props
-    console.log(recipe)
 
     return <h1>{recipe.name}</h1>
 
