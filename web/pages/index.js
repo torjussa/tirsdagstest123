@@ -13,7 +13,7 @@ export default function Home (props) {
       <div className="recipes-list">
       {
         recipes.map ( recipe => 
-         <Recipe recipe={recipe}/>
+         <Recipe recipe={recipe} key={recipe._id}/>
         )
       }
       </div>
